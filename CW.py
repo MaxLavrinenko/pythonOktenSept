@@ -16,25 +16,29 @@ while True:
         continue
     if choise == 1:
         id = input('Введите ID : ')
-        name = input('Имя юзера : ')
+        name = input('Имя юзера : ').capitalize()
         age = input('Возраст юзера : ')
-        status = input('Статус юзера : ')
+        status = input('Статус юзера : ').capitalize()
 
         users_list.append({'id': id, 'name': name, 'age': age, 'status': status})
         continue
     elif choise == 2:
         print(users_list)
         continue
-    elif choise == 3:
 
+    elif choise == 3:
+        users_list.sort(key=lambda x: x.get('age'))
+        print(users_list)
         continue
+
     elif choise == 4:
-        id = int(input('id= '))
+        id = str(input('id= '))
         for i in users_list:
-            print(i)
-            if i['id'] == 'id':
-                print(i['name'])
+            if i['id'] == id:
+                users_list.pop(users_list.index(i))
+                print(users_list)
         continue
+
     elif choise == 5:
         for i in users_list:
             if i['status'] == 'True':
@@ -43,6 +47,7 @@ while True:
                 i['status'] = 'True'
         print(users_list)
         continue
+
     elif choise == 6:
         break
 # стврорити меню в якому потрібно реалізувати:
