@@ -4,6 +4,25 @@
 #
 # запишите 5 тудушек
 # и выведете все
+def notebook():
+    todoList: list[str] = []
+
+    def addTodo(new:str) -> None:
+        nonlocal todoList
+        todoList.append(new)
+    def readTodo()-> list[str]:
+        return todoList
+    return addTodo,readTodo
+
+addTodo,readTodo = notebook()
+addTodo('wake up')
+addTodo('eat')
+addTodo('ddos russians')
+addTodo('read news')
+addTodo('sleep')
+readTodo()
+
+
 
 ########
 
