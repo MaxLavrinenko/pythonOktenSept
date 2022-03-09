@@ -7,22 +7,24 @@
 def notebook():
     todoList: list[str] = []
 
-    def addTodo(new:str) -> None:
+    def addTodo(new: str) -> None:
         nonlocal todoList
         todoList.append(new)
-    def readTodo()-> list[str]:
-        return todoList
-    return addTodo,readTodo
 
-addTodo,readTodo = notebook()
+    def readTodo() -> list[str]:
+        print(todoList)
+        return todoList
+
+    return addTodo, readTodo
+
+
+addTodo, readTodo = notebook()
 addTodo('wake up')
 addTodo('eat')
 addTodo('ddos russians')
 addTodo('read news')
 addTodo('sleep')
 readTodo()
-
-
 
 ########
 
