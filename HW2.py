@@ -38,7 +38,7 @@ def expanded(num: str) -> None:
     n1 = n[len(n) - 1]
     for i in num:
         i = str(i)
-        print(i)
+        print(i+('0'* n1))
 
 
 expanded('1234')
