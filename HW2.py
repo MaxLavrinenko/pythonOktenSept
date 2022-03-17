@@ -45,6 +45,8 @@ def expanded(num: int) -> str:
 
 print(expanded(1234))
 
+
+
 # Пример:
 #
 # expanded_form(12) # return '10 + 2'
