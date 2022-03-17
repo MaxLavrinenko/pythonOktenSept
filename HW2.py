@@ -33,21 +33,17 @@
 # 3) создать функцию которая будет возвращать сумму разрядов числа в виде строки (тоже с типизацией)
 #
 
-def expanded(num: int) -> None:
-    n = str(num)
-    l = list(n)
-    print(l)
+def expanded(num: int) -> str:
+    s = str(num)
+    list: list[str] = []
+    p: str = ''
+    for i in reversed(s):
+        if i != '0':
+            list.append(i + p)
+        p += '0'
+    return '+'.join(list[::-1])
 
-    for i in l:
-        print(i)
-    # for i in n:
-    #     if (num != 0):
-    #         p = num % 10
-    #         l.append(p)
-    #         num = num // 10
-    # print(l)
-
-expanded(1234)
+print(expanded(1234))
 
 # Пример:
 #
